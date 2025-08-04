@@ -10,12 +10,14 @@ Examples of all primitive values in JavaScript. Defined for writing unit test.
 
 ```typescript
 import {
-    NULL    ,    UNDEFINED        ,
-    TRUE    ,    FALSE            ,
-    INTEGER ,    INTEGER_NEGATIVE ,
-    FLOAT   ,    FLOAT_NEGATIVE   ,
-    BIGINT  ,    BIGINT_NEGATIVE  ,
-    STRING  ,    STRING_EMPTY     ,    STRING_MULTILINE,
+    NULL        ,  UNDEFINED            ,
+    TRUE        ,  FALSE                ,
+    INTEGER     ,  INTEGER_NEGATIVE     ,
+    FLOAT       ,  FLOAT_NEGATIVE       ,
+    ZERO        ,  ZERO_NEGATIVE        ,
+    BIGINT      ,  BIGINT_NEGATIVE      ,
+    BIGINT_ZERO ,  BIGINT_ZERO_NEGATIVE ,
+    STRING      ,  STRING_EMPTY         ,  STRING_MULTILINE,
     SYMBOL
 } from '@leismore/lmos-nodejs-primitives';
 ```
