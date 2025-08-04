@@ -1,6 +1,6 @@
 {
   "name": "@leismore/lmos-nodejs-primitives",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Examples of all primitive values in JavaScript. Defined for writing unit test.",
   "keywords": [
     "JavaScript",
