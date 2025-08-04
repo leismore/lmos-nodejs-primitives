@@ -1,13 +1,15 @@
 import assert from 'node:assert/strict';
-import test from 'node:test';
-import {EOL} from 'os';
+import test   from 'node:test';
+import {EOL}  from 'os';
 import {
-    NULL    ,    UNDEFINED        ,
-    TRUE    ,    FALSE            ,
-    INTEGER ,    INTEGER_NEGATIVE ,
-    FLOAT   ,    FLOAT_NEGATIVE   ,
-    BIGINT  ,    BIGINT_NEGATIVE  ,
-    STRING  ,    STRING_EMPTY     ,    STRING_MULTILINE,
+    NULL        ,  UNDEFINED            ,
+    TRUE        ,  FALSE                ,
+    INTEGER     ,  INTEGER_NEGATIVE     ,
+    FLOAT       ,  FLOAT_NEGATIVE       ,
+    ZERO        ,  ZERO_NEGATIVE        ,
+    BIGINT      ,  BIGINT_NEGATIVE      ,
+    BIGINT_ZERO ,  BIGINT_ZERO_NEGATIVE ,
+    STRING      ,  STRING_EMPTY         ,  STRING_MULTILINE,
     SYMBOL
 } from '../src/index.js';
 
@@ -53,6 +55,14 @@ test('NUMBER values', async (t) => {
         assert.strictEqual(FLOAT_NEGATIVE, -3.14);
     });
 
+    await t.test('ZERO is 0', () => {
+        assert.strictEqual(ZERO, 0);
+    });
+
+    await t.test('ZERO_NEGATIVE is -0', () => {
+        assert.strictEqual(ZERO_NEGATIVE, -0);
+    });
+
 });
 
 // BigInt
@@ -64,6 +74,14 @@ test('BigInt values', async (t) => {
 
     await t.test('BIGINT_NEGATIVE is MIN_SAFE_INTEGER -1', () => {
         assert.strictEqual(BIGINT_NEGATIVE, BigInt(Number.MIN_SAFE_INTEGER) - BigInt(1));
+    });
+
+    await t.test('BIGINT_ZERO is 0n', () => {
+        assert.strictEqual(BIGINT_ZERO, BigInt(0));
+    });
+
+    await t.test('BIGINT_ZERO_NEGATIVE is -0n', () => {
+        assert.strictEqual(BIGINT_ZERO_NEGATIVE, BigInt(-0));
     });
 
 });
