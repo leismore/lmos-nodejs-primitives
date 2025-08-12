@@ -10,7 +10,8 @@ import {
     BIGINT      ,  BIGINT_NEGATIVE      ,
     BIGINT_ZERO ,  BIGINT_ZERO_NEGATIVE ,
     STRING      ,  STRING_EMPTY         ,  STRING_MULTILINE,
-    SYMBOL
+    SYMBOL      ,
+    ALL
 } from '../src/index.js';
 
 // Null
@@ -112,4 +113,30 @@ test('STRING values', async (t) => {
 test('SYMBOL is a unique symbol', () => {
     assert.ok(typeof SYMBOL === 'symbol');
     assert.notStrictEqual(SYMBOL, Symbol());
+});
+
+// All
+test('ALL contains all defined primitive values', () => {
+    const expected = [
+        NULL,
+        UNDEFINED,
+        TRUE,
+        FALSE,
+        INTEGER,
+        INTEGER_NEGATIVE,
+        FLOAT,
+        FLOAT_NEGATIVE,
+        ZERO,
+        ZERO_NEGATIVE,
+        BIGINT,
+        BIGINT_NEGATIVE,
+        BIGINT_ZERO,
+        BIGINT_ZERO_NEGATIVE,
+        STRING,
+        STRING_EMPTY,
+        STRING_MULTILINE,
+        SYMBOL
+    ];
+
+    assert.deepStrictEqual(ALL, expected);
 });
