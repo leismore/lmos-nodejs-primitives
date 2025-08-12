@@ -40,6 +40,20 @@ const STRING_MULTILINE = (
 // Symbol
 const SYMBOL = Symbol();
 
+// All
+
+const ALL = [
+    NULL        ,    UNDEFINED            ,
+    TRUE        ,    FALSE                ,
+    INTEGER     ,    INTEGER_NEGATIVE     ,
+    FLOAT       ,    FLOAT_NEGATIVE       ,
+    ZERO        ,    ZERO_NEGATIVE        ,
+    BIGINT      ,    BIGINT_NEGATIVE      ,
+    BIGINT_ZERO ,    BIGINT_ZERO_NEGATIVE ,
+    STRING      ,    STRING_EMPTY         ,    STRING_MULTILINE,
+    SYMBOL
+];
+
 // Export all defined primitive values
 export {
     NULL        ,    UNDEFINED            ,
@@ -50,5 +64,6 @@ export {
     BIGINT      ,    BIGINT_NEGATIVE      ,
     BIGINT_ZERO ,    BIGINT_ZERO_NEGATIVE ,
     STRING      ,    STRING_EMPTY         ,    STRING_MULTILINE,
-    SYMBOL
+    SYMBOL      ,
+    ALL
 };
