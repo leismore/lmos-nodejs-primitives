@@ -18,9 +18,12 @@ import {
     BIGINT      ,  BIGINT_NEGATIVE      ,
     BIGINT_ZERO ,  BIGINT_ZERO_NEGATIVE ,
     STRING      ,  STRING_EMPTY         ,  STRING_MULTILINE,
-    SYMBOL
+    SYMBOL      ,
+    ALL
 } from '@leismore/lmos-nodejs-primitives';
 ```
+
+`ALL` is an array which contains all primitive values.
 
 ## License
 
